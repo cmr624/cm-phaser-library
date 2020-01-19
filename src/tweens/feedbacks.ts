@@ -14,6 +14,7 @@ class FeedbackTween{
             e.setInteractive();
         });
         this.config.yoyo = true;
+        
     }
 
     start() {

@@ -20,3 +20,4 @@
 - [ ] global sound menu (with options for music / sfx volume)
 - [ ] Arcade sprite with move to cursor
 - [ ] Sprite move towards angle (any vec2)
+- [x] Graphics Drawing Sprites
