@@ -25,7 +25,7 @@
     - [x] Regular tweens (scale, color (?))
     - [x] Tween chaining!!!!
 - [x] Graphics Drawing Sprites
-- [x] Arcade sprite with move to cursor (completed in `game-jam` repo)
+- [x] Arcade sprite with move to cursor 
 - [x] Sprite move towards angle (any vec2) (completed in `game-jam` repo)
 - [x] WASD Top Down Movement (completed in `game-jam` repo)
 
