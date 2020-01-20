@@ -12,7 +12,7 @@
 
 - **Graphic sprites** - sprites that are drawn using Phaser's 'graphics' library. This basically allows us to draw our shapes instead of loading them at runtime, which could help with building small throwaway objects that we don't want to import a png for. **NOTE** we should test this to make sure it is as performant as running a png, or at least understanding when to use it over when to use a png.
 
-- **Gameplay implementations** - we should add drag and drop, randomly spawning sprites within a container, rotate sprite to cursor, move towards cursor, 
+- **Gameplay implementations** - we should add drag and drop, randomly spawning sprites within a container, rotate sprite to cursor, move towards cursor, etc.
 
 ## TODO
 

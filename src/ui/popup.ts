@@ -1,8 +1,4 @@
 import { BaseSprite } from './../sprites/base';
-//popup
-import 'phaser';
-
-
 
 /**
  * Round Rectangle Sprite
@@ -19,6 +15,12 @@ class RoundedRectangleSprite extends BaseSprite {
     }
 }
 
+/**
+ * RoundedRectangle
+ * This guy draws a rounded rectangle, creates a texture for it, and destroys itself. Word.
+ * Also, be careful because this is a proof of concept and is kind of hacky.
+ * @extends {Phaser.GameObjects.Graphics} graphics
+ */
 class RoundedRectangle extends Phaser.GameObjects.Graphics {
     //scene : Phaser.Scene;
     shapeGraphic : Phaser.GameObjects.Graphics;
@@ -36,12 +38,16 @@ class RoundedRectangle extends Phaser.GameObjects.Graphics {
         this.destroy();
     }
 }
+
+//TODO: Implement popup
 export class Popup extends RoundedRectangleSprite {
     constructor(scene, x, y, width, height) {
         super(scene, x, y, width, height);
     }
 
 }
-//this.fillRect(rectObj.x, rectObj.y, rectObj.width, rectObj.height);
-        //graphics.fillRoundedRect(x, y, width, height, radius);
-        //this.strokeRect(rectObj.x, rectObj.y, rectObj.width, rectObj.height);
+
+//graveyard
+    //this.fillRect(rectObj.x, rectObj.y, rectObj.width, rectObj.height);
+    //graphics.fillRoundedRect(x, y, width, height, radius);
+    //this.strokeRect(rectObj.x, rectObj.y, rectObj.width, rectObj.height);
