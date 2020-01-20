@@ -25,8 +25,11 @@
     - [x] Regular tweens (scale, color (?))
     - [x] Tween chaining!!!!
 - [x] Graphics Drawing Sprites
+- [x] Arcade sprite with move to cursor (completed in `game-jam` repo)
+- [x] Sprite move towards angle (any vec2) (completed in `game-jam` repo)
+- [x] WASD Top Down Movement (completed in `game-jam` repo)
+
 - [ ] Base Matter Sprite (?)
-- [ ] WASD Top Down Movement
 - [ ] UI Scene (above base scene)
 - [ ] Scrollable scene
 - [ ] Popups
@@ -35,6 +38,3 @@
 - [ ] RexUI implementation
 - [ ] Pause menu
 - [ ] global sound menu (with options for music / sfx volume)
-- [ ] Arcade sprite with move to cursor
-- [ ] Sprite move towards angle (any vec2)
-
