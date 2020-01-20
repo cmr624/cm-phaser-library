@@ -14,21 +14,21 @@
 
 - **Gameplay implementations** - we should add drag and drop, randomly spawning sprites within a container, rotate sprite to cursor, move towards cursor, 
 
-## TODO 
+## TODO
 
 - [x] Base Arcade Sprite
 - [x] Base Sprite
 - [x] Keyboard Input Classes
 - [x] Text style types
 - [x] Tweens
-    - [x] Feedback tweens (disallow them to be pressed while tween is active)
-    - [x] Regular tweens (scale, color (?))
-    - [x] Tween chaining!!!!
+  - [x] Feedback tweens (disallow them to be pressed while tween is active)
+  - [x] Regular tweens (scale, color (?))
+  - [x] Tween chaining!!!!
 - [x] Graphics Drawing Sprites
-- [x] Arcade sprite with move to cursor 
-- [x] Sprite move towards angle (any vec2) (completed in `game-jam` repo)
-- [x] WASD Top Down Movement (completed in `game-jam` repo)
+- [x] Arcade sprite with move to cursor
+- [x] WASD Top Down Movement
 
+- [ ] Sprite move towards angle (any vec2)
 - [ ] Base Matter Sprite (?)
 - [ ] UI Scene (above base scene)
 - [ ] Scrollable scene
