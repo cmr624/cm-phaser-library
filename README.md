@@ -2,7 +2,7 @@
 
 ## Features
 
-- **Base sprites** (arcade and non-arcade) - which allows us to inherit from a base custom sprite that allows us to plugin to other "base" features we decide to implement. I can see eventually adding to this class to allow for sprites to have sound controlled by some global plugin.
+- **Base sprites** (arcade and non-arcade) - allows us to inherit from a base custom sprite that adds to the scene and contains a reference to the scene.
 
 - **Input features** - such as a simplified WASD arrow keys system and the `StandardInput` class which gives us up/down/left/right.
 
@@ -18,7 +18,7 @@
 
 - [x] Base Arcade Sprite
 - [x] Base Sprite
-- [x] Keyboard Input Class from phaser-td-typescript / schol treasure hunt
+- [x] Keyboard Input Classes
 - [x] Text style types
 - [x] Tweens
     - [x] Feedback tweens (disallow them to be pressed while tween is active)
