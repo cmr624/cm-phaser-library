@@ -18,16 +18,17 @@
 
 - [x] Base Arcade Sprite
 - [x] Base Sprite
+- [x] Base Container
 - [x] Keyboard Input Classes
 - [x] Text style types
 - [x] Tweens
   - [x] Feedback tweens (disallow them to be pressed while tween is active)
   - [x] Regular tweens (scale, color (?))
-  - [x] Tween chaining!!!!
+  - [x] Tween chaining
 - [x] Graphics Drawing Sprites
 - [x] Arcade sprite with move to cursor
 - [x] WASD Top Down Movement
-
+- [x] Damageable
 - [ ] Sprite move towards angle (any vec2)
 - [ ] Base Matter Sprite (?)
 - [ ] UI Scene (above base scene)
