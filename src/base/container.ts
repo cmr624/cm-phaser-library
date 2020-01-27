@@ -1,3 +1,6 @@
+/**
+ * Base Container to extend from
+ */
 export class BaseContainer extends Phaser.GameObjects.Container{
     scene : Phaser.Scene;
     constructor(scene, x, y, children?){

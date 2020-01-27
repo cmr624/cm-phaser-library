@@ -35,6 +35,11 @@ export class Damageable {
       return this.currentHealth;
     }
   
+    getMaxHealth(){
+      return this.maxHealth;
+    }
+
+    
     /**
      * Damage the damageable entity
      * @param amount amount to damage the damageable
