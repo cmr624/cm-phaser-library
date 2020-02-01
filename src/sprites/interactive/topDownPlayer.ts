@@ -14,6 +14,22 @@ export default class BasePlayerArcade extends BaseArcadeSprite {
     }
 }
 
+
+/**
+ * Top Down Player
+ */
+export class TopDownPlayer extends BasePlayerArcade {
+    speed : number;
+    constructor(scene : Phaser.Scene, x, y, key, speed) {
+        super(scene, x, y, key);
+        this.speed = speed;
+    }
+    
+    update(){
+        super.update();
+        topDownMovement(this, this.speed);
+    }
+}
 /**
  * TopDownPlayerWithRotation
  * @classdesc Base TopDown "Player" with rotation and top down WASD movement.
@@ -97,3 +113,5 @@ export function topDownMovement(sprite : BasePlayerArcade, speed : number) {
 function diagonalVelocity(speed : number) : number{
     return speed * Math.SQRT1_2;
 }
+
+
