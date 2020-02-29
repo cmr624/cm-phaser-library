@@ -2,6 +2,7 @@
 
 ## Install
 `git clone https://github.com/cmr624/cm-phaser-library.git`
+
 `cd cm-phaser-library && npm i`
 
 ## Overview
