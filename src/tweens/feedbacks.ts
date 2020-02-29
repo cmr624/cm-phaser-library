@@ -5,7 +5,7 @@
  * the easiest way to prevent multiple tweens to execute on the same gameobject but im probably wrong
  */
 class FeedbackTween{
-    public config : Phaser.Types.Tweens.TweenBuilderConfig | any  ;
+    public config : Phaser.Types.Tweens.TweenBuilderConfig | any;
     scene : Phaser.Scene;
     constructor(scene : Phaser.Scene, targets : Array<Phaser.GameObjects.GameObject> | Phaser.GameObjects.GameObject) {
         this.scene = scene;

@@ -1,5 +1,5 @@
+//NOT IMPLEMENTED YET
 import { BaseSprite } from './../sprites/base';
-
 /**
  * Round Rectangle Sprite
  * Based on a graphics rectangle object.
@@ -48,6 +48,6 @@ export class Popup extends RoundedRectangleSprite {
 }
 
 //graveyard
-    //this.fillRect(rectObj.x, rectObj.y, rectObj.width, rectObj.height);
-    //graphics.fillRoundedRect(x, y, width, height, radius);
-    //this.strokeRect(rectObj.x, rectObj.y, rectObj.width, rectObj.height);
+//this.fillRect(rectObj.x, rectObj.y, rectObj.width, rectObj.height);
+//graphics.fillRoundedRect(x, y, width, height, radius);
+//this.strokeRect(rectObj.x, rectObj.y, rectObj.width, rectObj.height);

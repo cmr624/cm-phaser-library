@@ -3,7 +3,7 @@ import { StandardKeyboardInput } from "../../input/standard";
 
 /**
  * BasePlayerArcade
- * @classdesc Base Arcade "Player" which basically is just the base arcade sprite with a refernce to the keys
+ * @classdesc Base Arcade "Player" which basically is just the base arcade sprite with a reference to the keys
  * @property {StandardKeyboardInput} keys
  */
 export default class BasePlayerArcade extends BaseArcadeSprite {
@@ -13,7 +13,6 @@ export default class BasePlayerArcade extends BaseArcadeSprite {
         this.keys = new StandardKeyboardInput(this.scene);
     }
 }
-
 
 /**
  * Top Down Player
@@ -55,7 +54,7 @@ export class TopDownPlayerWithRotation extends BasePlayerArcade {
  * Should be called in an update function
  * @param {BaseArcadeSprite} sprite - Arcade sprite
  */
-export function rotateToCursor(sprite : BaseArcadeSprite) {
+export function rotateToCursor(sprite : BaseArcadeSprite) : void {
     sprite.scene.input.activePointer.updateWorldPoint(sprite.scene.cameras.main);
     sprite.setRotation(Phaser.Math.Angle.Between(sprite.x, sprite.y, sprite.scene.input.activePointer.worldX, sprite.scene.input.activePointer.worldY) + Phaser.Math.DegToRad(90));
 }
@@ -66,7 +65,7 @@ export function rotateToCursor(sprite : BaseArcadeSprite) {
  * @param {BasePlayerArcade} sprite - sprite enabled for interactivity with standard top down input keys
  * @param {number} speed - number
  */
-export function topDownMovement(sprite : BasePlayerArcade, speed : number) {
+export function topDownMovement(sprite : BasePlayerArcade, speed : number)  : void {
     let v = diagonalVelocity(speed)
     // TOP RIGHT
     if (sprite.keys.rightPressed() && sprite.keys.upPressed())
@@ -107,7 +106,7 @@ export function topDownMovement(sprite : BasePlayerArcade, speed : number) {
 /**
  * diagonal velocity
  * I don't know if this is right, but i feel like this works. 
- * ???? 1 / sq rt(2) ~ .7 which makes sense? triangles? i think???
+ * ???? 1 / sq rt(2) ~ .7 which makes sense? triangles? i think!!!
  * @param {number} speed 
  * @returns {number} hypotenuse velocity of the speed
  */

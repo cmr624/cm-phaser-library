@@ -16,7 +16,7 @@ This library is intended to be a group of commonly used scripts among Phaser 3 g
 
 - **Graphic sprites** - sprites that are drawn using Phaser's 'graphics' library. This basically allows us to draw our shapes instead of loading them at runtime, which could help with building small throwaway objects that we don't want to import a png for.
 
-- **Gameplay implementations** - Top Down Player movement, WASD movement, move to cursor.
+- **Gameplay implementations** - Top Down Player movement, WASD movement, move to cursor, damageable class.
 
 ## TODO
 

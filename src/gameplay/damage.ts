@@ -4,7 +4,7 @@ export class Damageable {
     private allowStacking : boolean;
     private dead : boolean;
   
-    constructor(maxHealth, startingHealth?, allowStacking?){
+    constructor(maxHealth : number, startingHealth? : number, allowStacking? : boolean){
       this.maxHealth = maxHealth;
       if (startingHealth) {
         this.currentHealth = startingHealth;
@@ -39,18 +39,17 @@ export class Damageable {
       return this.maxHealth;
     }
 
-    
     /**
      * Damage the damageable entity
      * @param amount amount to damage the damageable
      * @returns {boolean} killsOnDamage
      */
-    damage(amount) : boolean{
+    damage(amount : number) : boolean {
       this.currentHealth -= amount;
       return this.checkDead();
     }
-  
-    heal(amount){
+    
+    heal(amount : number){
       if (this.allowStacking){
         this.currentHealth+=amount;
       }
