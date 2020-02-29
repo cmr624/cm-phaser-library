@@ -1,5 +1,9 @@
 # CM Phaser Library
 
+## Install
+`git clone https://github.com/cmr624/cm-phaser-library.git`
+`cd cm-phaser-library && npm i`
+
 ## Overview
 
 This library is intended to be a group of commonly used scripts among Phaser 3 games. It is a work in progress!
