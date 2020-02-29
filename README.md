@@ -1,6 +1,10 @@
 # CM Phaser Library
 
-## Features
+## Overview
+
+This library is intended to be a group of commonly used scripts among Phaser 3 games. It is a work in progress!
+
+## Current Features
 
 - **Base sprites** (arcade and non-arcade) - allows us to inherit from a base custom sprite that adds to the scene and contains a reference to the scene.
 
@@ -8,11 +12,11 @@
 
 - **Tween features** - "feedback" tweens which prevents tweens on interactive objects from being triggered more than once, "tween chain" object which takes an array of tweens and executes them one after another, and other basic tweens (scale tweens, etc.)
 
-- **Text features** - define commonly used text *styles* ("standard" for now is Helvetica, 48px black)
+- **Text features** - define commonly used Phaser text styles
 
-- **Graphic sprites** - sprites that are drawn using Phaser's 'graphics' library. This basically allows us to draw our shapes instead of loading them at runtime, which could help with building small throwaway objects that we don't want to import a png for. **NOTE** we should test this to make sure it is as performant as running a png, or at least understanding when to use it over when to use a png.
+- **Graphic sprites** - sprites that are drawn using Phaser's 'graphics' library. This basically allows us to draw our shapes instead of loading them at runtime, which could help with building small throwaway objects that we don't want to import a png for.
 
-- **Gameplay implementations** - we should add drag and drop, randomly spawning sprites within a container, rotate sprite to cursor, move towards cursor, etc.
+- **Gameplay implementations** - Top Down Player movement, WASD movement, move to cursor.
 
 ## TODO
 
@@ -32,10 +36,8 @@
 - [ ] Sprite move towards angle (any vec2)
 - [ ] Base Matter Sprite (?)
 - [ ] UI Scene (above base scene)
-- [ ] Scrollable scene
 - [ ] Popups
 - [ ] Text objects
-- [ ] ClassMags Toolbar (??????)
 - [ ] RexUI implementation
 - [ ] Pause menu
-- [ ] global sound menu (with options for music / sfx volume)
+- [ ] Global sound menu (with options for music / sfx volume)
