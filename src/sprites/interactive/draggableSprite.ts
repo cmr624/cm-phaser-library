@@ -35,6 +35,10 @@ export class DraggableContainer extends BaseContainer {
     drop(){
 
     }
+
+    dropOnTarget(){
+        
+    }
 }
 
 /**

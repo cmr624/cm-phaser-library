@@ -13,6 +13,8 @@ This library is intended to be a group of commonly used scripts among Phaser 3 g
 
 - **Base sprites** (arcade and non-arcade) - allows us to inherit from a base custom sprite that adds to the scene and contains a reference to the scene.
 
+- **UI gameobjects** - draggables,
+
 - **Input features** - such as a simplified WASD arrow keys system and the `StandardInput` class which gives us up/down/left/right.
 
 - **Tween features** - "feedback" tweens which prevents tweens on interactive objects from being triggered more than once, "tween chain" object which takes an array of tweens and executes them one after another, and other basic tweens (scale tweens, etc.)

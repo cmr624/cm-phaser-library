@@ -8,7 +8,7 @@ export default class DraggableManager extends Phaser.GameObjects.GameObject{
         this.scene.input.on('drag', this.drag);
         this.scene.input.on('dragstart', this.dragStart);
         this.scene.input.on('pointerup', this.drop);
-
+        this.scene.input.on('drop', this.dropOnTarget);
     }
     /**
      * 
@@ -22,13 +22,20 @@ export default class DraggableManager extends Phaser.GameObjects.GameObject{
         go.y = dragY;
     }
 
+    dropOnTarget(pointer, gameObject, dropZone){
+        console.log('drop');
+        gameObject?.dropOnTarget();
+        gameObject.x = dropZone.x;
+        gameObject.y = dropZone.y;
+    }
+
     dragStart(pointer, go){
-        go.dragStart();
+        go?.dragStart();
         this.currentGameObject = go;
     }
 
     drop(){
-        this.currentGameObject.drop();
+        this.currentGameObject?.drop();
         this.currentGameObject = undefined;
     }
 }
