@@ -10,14 +10,15 @@ export class DraggableSprite extends BaseSprite {
     }
 
     dragStart(){
-        console.log('entered drag');
+        //console.log('entered drag');
     }
 
     drop(){
-        console.log('left drag');
+        //console.log('left drag');
     }
 }
 
+//TODO : Make abstract? does it matter?
 export class DraggableContainer extends BaseContainer {
 
     constructor(scene, x, y, children?){
@@ -36,44 +37,7 @@ export class DraggableContainer extends BaseContainer {
 
     }
 
-    dropOnTarget(){
+    dropOnTarget(dropZone : Phaser.GameObjects.Zone){
         
     }
 }
-
-/**
- * 
- * 
- * Name 	Type 	Description
-pointer 	Phaser.Input.Pointer 	
-
-The Pointer responsible for triggering this event.
-gameObject 	Phaser.GameObjects.GameObject 	
-
-The interactive Game Object that this pointer is dragging.
-dragX 	number 	
-
-The x coordinate where the Pointer is currently dragging the Game Object, in world space.
-dragY 	number 	
-
-The y coordinate where the Pointer is currently dragging the Game Object, in world space.
-
- * drag(pointer , gameObject , dragX, dragY) {
-      if (gameObject.type !== "FAKE") {
-        gameObject.parentContainer.bringToTop(gameObject);
-      }
-
-      gameObject.x = dragX;
-      gameObject.y = dragY;
-      
-    }  
-    this.scene.physics.world.enable(this);
-        this.setCollideWorldBounds();
-        this.scene.add.existing(this);
-        this.setInteractive();
-        this.scene.input.setDraggable(this);
-
-        this.scene.input.on('drag',  this.drag);
-        this.scene.input.on('dragend', (p, go) => {
- * 
- */

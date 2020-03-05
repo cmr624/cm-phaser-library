@@ -23,10 +23,9 @@ export default class DraggableManager extends Phaser.GameObjects.GameObject{
     }
 
     dropOnTarget(pointer, gameObject, dropZone){
-        console.log('drop');
-        gameObject?.dropOnTarget();
-        gameObject.x = dropZone.x;
-        gameObject.y = dropZone.y;
+        // console.log('drop');
+        // console.log(dropZone);
+        gameObject?.dropOnTarget(dropZone);
     }
 
     dragStart(pointer, go){
