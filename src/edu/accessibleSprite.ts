@@ -8,7 +8,7 @@ import BaseEDUScene from "./baseEduScene";
 export class AccessibleSprite extends BaseSprite{
     
     domElement : Phaser.GameObjects.DOMElement;
-    
+    name : string;
     /**
      * Base Accessible Sprite
      * Contains a DOM element that has the same width / height as our button
@@ -16,12 +16,22 @@ export class AccessibleSprite extends BaseSprite{
      */
     constructor(public scene : BaseEDUScene, x : number, y : number, key : string) {
         super(scene, x, y, key);
+        this.name = key;
         let el = document.createElement('div');
         el.tabIndex = 0;
         el.style.width = this.width + "px";
         el.style.height = this.height + "px";
+        el.setAttribute('role', 'button');
+        el.onkeydown = ((e) => {
+            if ((e.which === 13) || (e.which === 32)) {
+                this.click();
+            }
+        });
         this.domElement = this.scene.add.dom(x, y, el);
-        this.hideDOMElement();
+    }
+
+    click(){
+        console.log(this.name);
     }
 
     moveDOMElement(x, y) {
