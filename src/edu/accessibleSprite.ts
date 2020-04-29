@@ -5,7 +5,7 @@ import BaseEDUScene from "./baseEduScene";
  * Base Accessible Sprite
  * @property {BaseEDUScene} scene a reference to the current scene the sprite exists in
  */
-export class AccessibleSprite extends BaseSprite{
+export class AccessibleSpriteButton extends BaseSprite{
     
     domElement : Phaser.GameObjects.DOMElement;
     name : string;
@@ -28,10 +28,13 @@ export class AccessibleSprite extends BaseSprite{
             }
         });
         this.domElement = this.scene.add.dom(x, y, el);
+
+        this.setInteractive();
+        this.on('pointerdown', () => this.click());
     }
 
     click(){
-        console.log(this.name);
+        this.scene.subtitleManager.addSubtitle(this.scene, this.name);
     }
 
     moveDOMElement(x, y) {
