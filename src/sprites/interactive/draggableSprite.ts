@@ -1,4 +1,3 @@
-import 'phaser';
 import { BaseSprite, BaseArcadeSprite } from "../base";
 import { BaseContainer } from '../../base/container';
 export class DraggableSprite extends BaseSprite {
