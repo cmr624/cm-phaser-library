@@ -26,11 +26,11 @@ export class AccessibleSpriteButton extends BaseSprite{
         el.setAttribute('role', 'button');
         el.onkeydown = ((e) => {
             if ((e.which === 13) || (e.which === 32)) {
-                this.clickFunction();
+                this.clickFunction ? this.clickFunction():undefined;
             }
         });
         this.domElement = this.scene.add.dom(x, y, el);
-        this.setClick(() => this.scene.subtitleManager.addSubtitle(this.scene, this.name));
+        //this.setClick(() => this.scene.subtitleManager.addSubtitle(this.scene, this.name));
     }
 
     setClick(fn : Function){
