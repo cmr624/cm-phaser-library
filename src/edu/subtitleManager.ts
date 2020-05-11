@@ -32,30 +32,30 @@ export default class SubtitleManager extends Phaser.Plugins.BasePlugin {
 }
 
 export class SubtitleContainer extends BaseContainer {
-    stack : Array<Phaser.GameObjects.Text>;
+    queue : Array<Phaser.GameObjects.Text>;
 
     timeSubtitleDisplayedMs:number = 2000;
 
     constructor(scene, x, y, children?){
         super(scene, x, y, children!);
-        this.stack = new Array<Phaser.GameObjects.Text>();
+        this.queue = new Array<Phaser.GameObjects.Text>();
     }
 
-    clearStack(){
-        this.stack.forEach((e) => e.destroy());
-        this.stack = [];
+    clearQueue(){
+        this.queue.forEach((e) => e.destroy());
+        this.queue = [];
     }
 
     addSubtitle(text : Phaser.GameObjects.Text){
-        if (this.stack.length > 0) {
-            //move everyone on the stack up by 50 px
-            this.stack.forEach((e) => e.y -= 50);
+        if (this.queue.length > 0) {
+            //move everyone on the queue up by 50 px
+            this.queue.forEach((e) => e.y -= 50);
         }
-        this.stack.unshift(text);
+        this.queue.unshift(text);
         this.add(text);
         
         setTimeout(() => {
-            this.stack.pop()?.destroy();
+            this.queue.pop()?.destroy();
         }, this.timeSubtitleDisplayedMs);
     }
     hideSubtitleContainer(){
