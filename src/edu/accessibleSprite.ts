@@ -9,6 +9,8 @@ export class AccessibleSpriteButton extends BaseSprite{
     
     domElement : Phaser.GameObjects.DOMElement;
     name : string;
+
+    clickFunction : Function;
     /**
      * Base Accessible Sprite
      * Contains a DOM element that has the same width / height as our button
@@ -24,17 +26,18 @@ export class AccessibleSpriteButton extends BaseSprite{
         el.setAttribute('role', 'button');
         el.onkeydown = ((e) => {
             if ((e.which === 13) || (e.which === 32)) {
-                this.click();
+                this.clickFunction ? this.clickFunction():undefined;
             }
         });
         this.domElement = this.scene.add.dom(x, y, el);
-
-        this.setInteractive();
-        this.on('pointerdown', () => this.click());
     }
 
-    click(){
-        this.scene.subtitleManager.addSubtitle(this.scene, this.name);
+    setClick(fn : Function){
+        this.setInteractive();
+        this.on('pointerdown', () => {
+            fn();
+        });
+        this.clickFunction = fn;
     }
 
     moveDOMElement(x, y) {
