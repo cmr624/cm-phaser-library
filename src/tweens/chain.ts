@@ -11,13 +11,13 @@ import { asyncForEach } from "../utils/async";
  */
 export default class TweenChain {
     private array : [];
-    constructor(public scene: Phaser.Scene, array) {
+    constructor(public scene: Phaser.Scene, array, public onFinished?) {
         this.array = array;
         this.startTweens();
     }
 
     startTweens() {
-        asyncForEach(this.array, this.tweensAsync);
+        asyncForEach(this.array, this.tweensAsync, this.onFinished!);
     }
   
     /**
