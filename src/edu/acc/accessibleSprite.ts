@@ -43,10 +43,12 @@ export class AccessibleSpriteButton extends BaseSprite implements ITabbable{
     }
 
     hideDOMElement(){
+        this.domElement.tabIndex = -1;
         this.domElement.setVisible(false);
     }
 
     showDOMElement(){
+        this.domElement.tabIndex = 0;
         this.domElement.setVisible(true);
     }
 }
