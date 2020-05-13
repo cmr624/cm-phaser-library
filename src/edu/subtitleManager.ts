@@ -39,6 +39,7 @@ export class SubtitleContainer extends BaseContainer {
     constructor(scene, x, y, children?){
         super(scene, x, y, children!);
         this.queue = new Array<Phaser.GameObjects.Text>();
+        this.setScrollFactor(0);
     }
 
     clearQueue(){
