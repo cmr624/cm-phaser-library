@@ -17,7 +17,7 @@ export default class SubtitleManager extends Phaser.Plugins.BasePlugin {
         this.subtitleDictionary = dict;
     }
 
-    addSubtitle(scene: BaseEDUScene, string:string){
+    private addSubtitle(scene: BaseEDUScene, string:string){
         scene.subtitleContainer.addSubtitle(scene.add.text(0, 0, string, defaultText).setOrigin(.5)); 
     }
 
