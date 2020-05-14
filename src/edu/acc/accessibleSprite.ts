@@ -28,6 +28,7 @@ export class AccessibleSpriteButton extends BaseSprite implements ITabbable{
         });
         this.domElement = this.scene.add.dom(x, y, el);
         this.showDOMElement();
+        this.domElement.setScrollFactor(0);
     }
 
     setClick(fn : Function){
