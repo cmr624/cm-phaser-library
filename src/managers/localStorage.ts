@@ -17,7 +17,7 @@ export class Storage implements WindowLocalStorage {
             console.log('we already have this thing in our db');
             return false;
         }
-        this.localStorage.setItem(file.key, JSON.stringify(file));
+        this.localStorage.setItem(`${file.programID}${file.key}`, JSON.stringify(file));
         this.map[file.key] = file;
         return true;
     }
