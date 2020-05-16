@@ -16,15 +16,36 @@ export class Storage implements WindowLocalStorage {
 
 
     initialize(){
+
+        this.map = new Map<string, BaseSaveFile>();
         if (this.localStorage.getItem(`${this.programID}manifest`) === null) {
             console.log('first time this user has used this program');
+            // initialize our manifest.
+            // FIRST SAVE
+            this.currentManifest = {programID : this.programID, keys : new Array<string>(), key : `${this.programID}manifest`};
+            this.saveManifest();
         }
         else {
-            // initialize our manifest.
-
-
+            // initialize our internal manifest with the local storage manifest
+            // LOAD
+            let manFromStorage = this.localStorage.getItem(`${this.programID}manifest`);
+            if (manFromStorage === null) {
+                console.error("wrong");
+                return;
+            }
+            console.log('the manifest has been loaded');
+            this.currentManifest = JSON.parse(manFromStorage) as SaveManifest;
+            this.saveManifest();
         }
-        this.map = new Map<string, BaseSaveFile>();
+    }
+
+    saveManifest() : void {
+        this.localStorage.setItem(this.currentManifest.key, JSON.stringify(this.currentManifest)); 
+    }
+
+    updateManifestMap<T extends BaseSaveFile>(file : T, save? : boolean){
+        this.currentManifest.keys = Object.keys(this.map);
+        save ? this.saveManifest() : null;
     }
 
     /**
@@ -38,13 +59,14 @@ export class Storage implements WindowLocalStorage {
         }
         this.localStorage.setItem(`${file.programID}${file.key}`, JSON.stringify(file));
         this.map[file.key] = file;
+        this.updateManifestMap(file, true);
         return true;
     }
 }
-
-interface SaveManifest {
+interface SaveManifest extends BaseSaveFile{
     programID : number;
-    map : Map<string, BaseSaveFile>;
+    key : string;
+    keys : Array<string>;
 }
 
 class DataObjectCreator {
