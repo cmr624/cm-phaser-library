@@ -3,15 +3,34 @@
 export class Storage implements WindowLocalStorage {
     
     map : Map<string, BaseSaveFile>;
-    saveSlots : Array<string>;
+    
+    localStorage: globalThis.Storage;
 
-    constructor(){
+
+    private currentManifest : SaveManifest;
+
+    constructor(public programID : number){
         this.localStorage = window.localStorage;
+        this.initialize();
+    }
+
+
+    initialize(){
+        if (this.localStorage.getItem(`${this.programID}manifest`) === null) {
+            console.log('first time this user has used this program');
+        }
+        else {
+            // initialize our manifest.
+
+
+        }
         this.map = new Map<string, BaseSaveFile>();
     }
 
-    localStorage: globalThis.Storage;
-
+    /**
+     * 
+     * @param file 
+     */
     saveFile<T extends BaseSaveFile>(file : T) : boolean{
         if (this.map[file.key] !== undefined) {
             console.log('we already have this thing in our db');
@@ -21,6 +40,11 @@ export class Storage implements WindowLocalStorage {
         this.map[file.key] = file;
         return true;
     }
+}
+
+interface SaveManifest {
+    programID : number;
+    map : Map<string, BaseSaveFile>;
 }
 
 class DataObjectCreator {
@@ -42,6 +66,8 @@ class DataObjectCreator {
     }
 
 }
+
+// we could have a manifest document that exists at the 'programIDmanifest' key that has every entry in storage
 
 // a save file has a program ID
 // and an *iterable storage structure ?*
