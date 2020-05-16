@@ -29,6 +29,7 @@ export class Storage implements WindowLocalStorage {
             // initialize our internal manifest with the local storage manifest
             // LOAD
             let manFromStorage = this.localStorage.getItem(`${this.programID}manifest`);
+            
             if (manFromStorage === null) {
                 console.error("wrong");
                 return;
@@ -43,8 +44,11 @@ export class Storage implements WindowLocalStorage {
         this.localStorage.setItem(this.currentManifest.key, JSON.stringify(this.currentManifest)); 
     }
 
-    updateManifestMap<T extends BaseSaveFile>(file : T, save? : boolean){
-        this.currentManifest.keys = Object.keys(this.map);
+    updateManifestMap(save? : boolean){
+        throw Error('not impelemented correctly');
+        (Object.keys(this.map).forEach((e) => {
+            this.currentManifest.keys.push(e);
+        }));
         save ? this.saveManifest() : null;
     }
 
@@ -57,9 +61,9 @@ export class Storage implements WindowLocalStorage {
             console.log('we already have this thing in our db');
             return false;
         }
-        this.localStorage.setItem(`${file.programID}${file.key}`, JSON.stringify(file));
+        this.localStorage.setItem(file.key, JSON.stringify(file));
         this.map[file.key] = file;
-        this.updateManifestMap(file, true);
+        this.updateManifestMap(true);
         return true;
     }
 }
