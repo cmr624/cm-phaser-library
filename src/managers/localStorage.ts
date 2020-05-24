@@ -44,13 +44,12 @@ export class Storage implements WindowLocalStorage {
         this.localStorage.setItem(this.currentManifest.key, JSON.stringify(this.currentManifest)); 
     }
 
-    updateManifestMap(save? : boolean){
-        throw Error('not impelemented correctly');
-        (Object.keys(this.map).forEach((e) => {
-            this.currentManifest.keys.push(e);
-        }));
-        save ? this.saveManifest() : null;
-    }
+    // updateManifestMap(save? : boolean){
+    //     (Object.keys(this.map).forEach((e) => {
+    //         this.currentManifest.keys.push(e);
+    //     }));
+    //     save ? this.saveManifest() : null;
+    // }
 
     /**
      * 
@@ -63,7 +62,7 @@ export class Storage implements WindowLocalStorage {
         }
         this.localStorage.setItem(file.key, JSON.stringify(file));
         this.map[file.key] = file;
-        this.updateManifestMap(true);
+        //this.updateManifestMap(true);
         return true;
     }
 }
