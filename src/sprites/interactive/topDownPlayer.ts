@@ -16,7 +16,7 @@ export default class BasePlayerArcade extends BaseArcadeSprite {
 
 /**
  * Top Down Player
- * Need to call update to get movement working in sc
+ * Need to call update to get movement working in scene
  */
 export class TopDownPlayer extends BasePlayerArcade {
     speed : number;
