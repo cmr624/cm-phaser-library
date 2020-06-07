@@ -7,7 +7,7 @@ import { defaultText } from "../objects/textStyles";
 import { BaseContainer } from "../base/container";
 export default class SubtitleManager extends Phaser.Plugins.BasePlugin {
 
-    subtitleDictionary : Map<string, string>;
+    subtitleDictionary? : Map<string, string>;
     constructor(pluginManager : Phaser.Plugins.PluginManager){
         super(pluginManager);
     }
@@ -18,12 +18,12 @@ export default class SubtitleManager extends Phaser.Plugins.BasePlugin {
     }
 
     private addSubtitle(scene: BaseEDUScene, string:string){
-        scene.subtitleContainer.addSubtitle(scene.add.text(0, 0, string, defaultText).setOrigin(.5)); 
+        scene.subtitleContainer!.addSubtitle(scene.add.text(0, 0, string, defaultText).setOrigin(.5)); 
     }
 
     playAudio(scene : BaseEDUScene, key : string) {
         let soundEffect : Phaser.Sound.BaseSound = scene.sound.add(key);
-        this.addSubtitle(scene, this.subtitleDictionary[key]);
+        this.addSubtitle(scene, this.subtitleDictionary![key]);
         soundEffect.play();
         return soundEffect;
     }

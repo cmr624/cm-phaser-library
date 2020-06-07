@@ -11,7 +11,7 @@ export default class BaseEDUScene extends EDUSceneTemplate {
     // menu bar plugin
     // analytics plugin (?)
 
-    subtitleContainer : SubtitleContainer;
+    subtitleContainer? : SubtitleContainer;
 
     constructor(key){
         super({key : key});

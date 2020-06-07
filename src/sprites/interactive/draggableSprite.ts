@@ -1,9 +1,8 @@
-import 'phaser';
 import { BaseSprite, BaseArcadeSprite } from "../base";
 import { BaseContainer } from '../../base/container';
 export class DraggableSprite extends BaseSprite {
 
-    constructor(scene, x, y, key, public dragEnd?){
+    constructor(scene : Phaser.Scene, x:number, y:number, key:string, public dragEnd? : Function){
         super(scene, x, y, key);  
         this.setInteractive(); 
         this.scene.input.setDraggable(this);
@@ -21,7 +20,7 @@ export class DraggableSprite extends BaseSprite {
 //TODO : Make abstract? does it matter?
 export class DraggableContainer extends BaseContainer {
 
-    constructor(scene, x, y, children?){
+    constructor(scene : Phaser.Scene, x: number, y : number, children? : any){
         super(scene, x, y, children!);
     }
 

@@ -20,7 +20,7 @@ export default class BasePlayerArcade extends BaseArcadeSprite {
  */
 export class TopDownPlayer extends BasePlayerArcade {
     speed : number;
-    constructor(scene : Phaser.Scene, x, y, key, speed) {
+    constructor(scene : Phaser.Scene, x : number, y : number, key : string, speed : number) {
         super(scene, x, y, key);
         this.speed = speed;
     }
@@ -37,7 +37,7 @@ export class TopDownPlayer extends BasePlayerArcade {
  */
 export class TopDownPlayerWithRotation extends BasePlayerArcade {
     private speed : number;
-    constructor(scene : Phaser.Scene, x, y, key, speed) {
+    constructor(scene : Phaser.Scene, x : number, y : number, key : string, speed : number) {
         super(scene, x, y, key);
         this.speed = speed;
     }
