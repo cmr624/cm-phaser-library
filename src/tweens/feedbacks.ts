@@ -4,7 +4,7 @@
  * Common examples of this type of tween would be for on-click tweens, like bouncing a button etc. This (seems ???????) like
  * the easiest way to prevent multiple tweens to execute on the same gameobject but im probably wrong
  */
-class FeedbackTween{
+export class FeedbackTween{
     public config : Phaser.Types.Tweens.TweenBuilderConfig | any;
     scene : Phaser.Scene;
     constructor(scene : Phaser.Scene, targets : Array<Phaser.GameObjects.GameObject> | Phaser.GameObjects.GameObject) {

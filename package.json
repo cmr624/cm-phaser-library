@@ -1,8 +1,8 @@
 {
-  "name": "phaser-library",
-  "version": "1.0.0",
+  "name": "cm-phaser-library",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "./src/main.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/cmr624/cm-phaser-library.git"
   },
-  "author": "CM",
-  "license": "ISC",
+  "author": "Carlos Michael <carlosmichaeldev@gmail.com> (https://www.carlos-michael.com)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/cmr624/cm-phaser-library/issues"
   },
