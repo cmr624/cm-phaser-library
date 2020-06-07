@@ -11,7 +11,7 @@ export class AccessibleSpriteButton extends BaseSprite implements ITabbable{
     domElement : Phaser.GameObjects.DOMElement;
     name : string;
 
-    clickFunction : Function;
+    clickFunction? : Function;
     /**
      * Base Accessible Sprite
      * Contains a DOM element that has the same width / height as our button

@@ -5,9 +5,8 @@ import { BaseSprite } from './../sprites/base';
  * Based on a graphics rectangle object.
  */
 class RoundedRectangleSprite extends BaseSprite {
-    scene : Phaser.Scene;
     rectangleGraphics : RoundedRectangle
-    constructor(scene, x, y, width, height) {
+    constructor(public scene : Phaser.Scene, x, y, width, height) {
         super(scene, x, y, '');
         this.rectangleGraphics = new RoundedRectangle(scene, {width:width, height:height});
         this.setTexture('roundedRect');

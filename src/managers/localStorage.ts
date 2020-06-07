@@ -2,12 +2,12 @@
 
 export class Storage implements WindowLocalStorage {
     
-    map : Map<string, BaseSaveFile>;
+    map? : Map<string, BaseSaveFile>;
     
     localStorage: globalThis.Storage;
 
 
-    private currentManifest : SaveManifest;
+    private currentManifest? : SaveManifest;
 
     constructor(public programID : number){
         this.localStorage = window.localStorage;
@@ -41,7 +41,7 @@ export class Storage implements WindowLocalStorage {
     }
 
     saveManifest() : void {
-        this.localStorage.setItem(this.currentManifest.key, JSON.stringify(this.currentManifest)); 
+        this.localStorage.setItem(this.currentManifest!.key, JSON.stringify(this.currentManifest)); 
     }
 
     // updateManifestMap(save? : boolean){
@@ -56,12 +56,12 @@ export class Storage implements WindowLocalStorage {
      * @param file 
      */
     saveFile<T extends BaseSaveFile>(file : T) : boolean{
-        if (this.map[file.key] !== undefined) {
+        if (this.map![file.key] !== undefined) {
             console.log('we already have this thing in our db');
             return false;
         }
         this.localStorage.setItem(file.key, JSON.stringify(file));
-        this.map[file.key] = file;
+        this.map![file.key] = file;
         //this.updateManifestMap(true);
         return true;
     }
