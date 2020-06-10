@@ -11,7 +11,9 @@ import { DraggableSprite } from './sprites/interactive/draggableSprite';
 import * as baseSprite from './sprites/base';
 import TweenChain from './tweens/chain';
 import * as feedbacks from './tweens/feedbacks';
+import * as acc from './acc/acc'
 export {
+    acc,
     BaseContainer,
     displayAndCopyCoords,
     Damageable,

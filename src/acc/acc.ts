@@ -3,3 +3,14 @@ import BaseEDUScene from "./baseEduScene";
 import SubtitleManager, { SubtitleContainer } from "./subtitleManager";
 import {ITabbable, createDiv} from './tabbable';
 import { BaseAudioExampleScene, IBaseAudioTracks } from "./audioManager";
+
+export {
+    AccessibleSpriteButton,
+    BaseEDUScene,
+    SubtitleManager,
+    SubtitleContainer,
+    ITabbable,
+    createDiv,
+    BaseAudioExampleScene,
+    IBaseAudioTracks
+}
