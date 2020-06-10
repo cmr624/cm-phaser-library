@@ -1,5 +1,5 @@
-import { BaseSprite } from "../../sprites/base";
-import BaseEDUScene from "../baseEduScene";
+import { BaseSprite } from "../sprites/base";
+import BaseEDUScene from "./baseEduScene";
 import { createDiv, ITabbable } from "./tabbable";
 
 /**
