@@ -1,6 +1,11 @@
 # CM Phaser Library
 
 ## Install
+
+To use
+`npm i --save cm-phaser-library`
+
+To develop
 `git clone https://github.com/cmr624/cm-phaser-library.git`
 
 `cd cm-phaser-library && npm i`
@@ -40,6 +45,7 @@ This library is intended to be a group of commonly used scripts among Phaser 3 g
 - [x] Arcade sprite with move to cursor
 - [x] WASD Top Down Movement
 - [x] Damageable
+- [x] Global sound menu (with options for music / sfx volume)
 - [ ] Sprite move towards angle (any vec2)
 - [ ] Base Matter Sprite (?)
 - [ ] UI Scene (above base scene)
@@ -47,4 +53,3 @@ This library is intended to be a group of commonly used scripts among Phaser 3 g
 - [ ] Text objects
 - [ ] RexUI implementation
 - [ ] Pause menu
-- [ ] Global sound menu (with options for music / sfx volume)
