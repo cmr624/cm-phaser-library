@@ -2,7 +2,7 @@ import { SubtitleContainer } from "./subtitleManager";
 
 export interface IBaseAudioTracks{
     // music track - any background or gameplay music
-    backgroundMusicTrack : Phaser.Sound.BaseSound;
+    backgroundMusicTrack : Phaser.Sound.BaseSound | Phaser.Sound.HTML5AudioSound | Phaser.Sound.WebAudioSound | Phaser.Sound.NoAudioSound | Phaser.Sound.BaseSoundManager;
     readonly defaultBgMusicOptions : Phaser.Types.Sound.SoundConfig;
     sfxOptions : Phaser.Types.Sound.SoundConfig;
     subtitleOptions : Phaser.Types.Sound.SoundConfig;
@@ -15,7 +15,7 @@ export interface IBaseAudioTracks{
 }
 
 export abstract class BaseAudioExampleScene extends Phaser.Scene implements IBaseAudioTracks{
-    backgroundMusicTrack: Phaser.Sound.BaseSound;
+    backgroundMusicTrack: Phaser.Sound.BaseSound | Phaser.Sound.BaseSoundManager;
 
     readonly defaultBgMusicOptions : Phaser.Types.Sound.SoundConfig = {
         mute : false,

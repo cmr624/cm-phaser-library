@@ -1,6 +1,6 @@
 import { BaseSprite } from "../sprites/base";
 import BaseEDUScene from "./baseEduScene";
-import { createDiv, ITabbable } from "./tabbable";
+import { createTabbableDiv, ITabbable } from "./tabbable";
 
 /**
  * Base Accessible Sprite
@@ -20,7 +20,7 @@ export class AccessibleSpriteButton extends BaseSprite implements ITabbable{
     constructor(public scene : BaseEDUScene, x : number, y : number, key : string) {
         super(scene, x, y, key);
         this.name = key;
-        let el = createDiv(this.height, this.width);
+        let el = createTabbableDiv(this.width, this.height);
         el.onkeydown = ((e) => {
             if ((e.which === 13) || (e.which === 32)) {
                 this.clickFunction ? this.clickFunction():undefined;
